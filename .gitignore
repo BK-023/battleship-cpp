@@ -1,0 +1,15 @@
+# Local build output
+build/
+cmake-build-*/
+CMakeUserPresets.json
+*.exe
+*.o
+*.obj
+*.a
+*.lib
+# IDE settings
+.idea/
+.vscode/
+# Operating system files
+.DS_Store
+Thumbs.db
