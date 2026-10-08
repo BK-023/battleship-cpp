@@ -61,14 +61,14 @@ The board dimensions and fleet sizes are defined in `src/app/init.cpp`.
 - `src/libSea/`: coordinates, objects, and the generic Grid2D container.
 - `src/libGameObjects/`: ships, missiles, player boards, and statistics.
 
-## Status and verification
+## Project status
 
-This is a learning project based on coursework. Original source files and exercise comments are preserved; the exact split between provided starter code and student contributions is not documented in the archive.
+The project compiles with GCC using C++20. The existing test for Grid2D's `walk` and `filter` functions passes when enabled. This test is disabled by default in `src/app/test.cpp`.
 
-The source compiled successfully with GCC in C++20 mode using `-Wall -Wextra -pedantic`. The existing Grid2D walk/filter test passed when compiled with `TEST_AUFGABE_2` enabled. That test is disabled by default in `src/app/test.cpp`; the default startup message alone is not evidence that the exercise test ran. CMake configuration and a full interactive game were not verified in the preparation environment.
+A full interactive playthrough has not yet been verified as part of this check.
 
-Known areas for improvement include end-of-input handling, output formatting for long player names, and rectangular-board handling in the tumbling missile (its y-coordinate clamp currently uses seaSizeX).
+## Possible improvements
 
-## Packaging
-
-The GitHub package adds this README and a .gitignore. Local IDE settings, build caches, and compiled binaries are omitted. No source code was changed during packaging.
+- Handle closed or interrupted console input.
+- Improve board formatting for long player names.
+- Fix the tumbling missile's vertical boundary check for rectangular boards.
